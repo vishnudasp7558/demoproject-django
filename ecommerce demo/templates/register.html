@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Wellcome to Login Page
+{% endblock %}
+{% block content %}
+<h1 class="text-center">wellcome to register page</h1>
+<form method="POST" >
+  {% csrf_token %}
+
+<div class="mb-3">
+  <label class="form-label">Username</label>
+  <input type="text" class="form-control" name="u" placeholder="Username">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Password</label>
+  <input type="password" class="form-control" name="p" placeholder="Password">
+</div>
+<div class="mb-3">
+  <label class="form-label"> Conform Password</label>
+  <input type="password" class="form-control" name="c" placeholder="Conform Password">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" name="e" id="exampleFormControlInput1" placeholder="email">
+</div>
+<div class="mb-3">
+  <label class="form-label">First Name</label>
+  <input type="text" class="form-control" name="f" placeholder="First name">
+</div>
+<div class="mb-3">
+  <label class="form-label">Last Name</label>
+  <input type="text" class="form-control" name="l" placeholder="Last name">
+</div>
+<div class="mb-3">
+  <input type="submit" class="btn btn-primary">
+</div>
+</form>
+{% endblock %}
